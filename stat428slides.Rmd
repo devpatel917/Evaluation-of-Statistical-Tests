@@ -1,0 +1,85 @@
+---
+title: 'STAT 428 Presentation: Statistical Tests and Recommendations'
+author: "Dev Patel"
+date: "2023-11-27"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+Statistical Tests and Recommendations
+- Nearest Neighbor Test 
+
+- Energy Distance Test
+
+- Hotelling’s T -square test
+
+- Graph Based Two Sample Test
+
+- Parameters = Settings for the tests to run optimally
+
+- Type II error = Likelihood of concluding that the two samples are different when in fact they are not (false negative)
+
+## Nearest Neighbor Test Choice of Parameter
+
+![Nearest Neighbor Test Parameter (Nearest Neighbors)](pic1.png){width=50%}
+
+- The choice of desired type II error and sample size affects what nearest neighbor value to select 
+
+- Advantages: Very clear which parameter choice is optimal (relative to other tests)
+
+## Graph based and Energy distance test Choice of Parameter
+
+<div style="display: flex;">
+  <img src="pic2.png" alt="Image 1" style="width:40%;">
+  <img src="pic3.png" alt="Image 2" style="width:40%;">
+</div>
+
+Desired Type II error influences choice of parameters for both tests (left = energy distance, two on right = graph)
+
+Disadvantages: Not clear and obvious which parameter choice is optimal 
+
+HTT Advantage: No resources need to be spent on selecting parameter for test
+
+## Test Comparisons Results for Dimensionality
+
+<div style="display: flex;">
+  <img src="pic4.png" alt="Image 1" style="width:40%;">
+  <img src="pic5.png" alt="Image 2" style="width:40%;">
+</div>
+
+- Right (dimensions = 2) and left (dimensions = 7)
+- Graph based Test is more suitable for low dimensional data 
+- Other tests can be more suitable for high dimensional data
+
+
+## Test Comparisons Results for Power and efficiency
+
+<div style="display: flex;">
+  <img src="pic10.png" alt="Image 1" style="width:40%;">
+  <img src="pic12.png" alt="Image 2" style="width:40%;">
+</div>
+
+- HTT is most computationally efficient, graph based is most inefficient
+- HTT is most powerful test (power = ability of test correctly identifying two samples to be different)
+
+
+## Final Recommendation
+
+Suggested test to utilize would be HTT for the reasons
+
+1. Most powerful test (great ability to correctly identify two samples to be different)
+
+2. Most efficient test (takes less time to run = fewer resources needed)
+
+3. Can work for both low dimensional and high dimensional data well
+
+4. Little/no parameter selections compared to other tests (less time and fewer resources needed to implement)
+
